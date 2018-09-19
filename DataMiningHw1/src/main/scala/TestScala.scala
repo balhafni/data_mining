@@ -9,7 +9,7 @@ object TestScala {
     var scalaConfig = new SparkConf().setAppName("firsAssignmnet").setMaster("local[2]")
     val sparkContext = new SparkContext(scalaConfig)
 
-    firstTaskDataFrame(scalaConfig, sparkContext)
+    firstTaskSeconcdTask(scalaConfig, sparkContext)
     thirdTask(scalaConfig, sparkContext)
     //firstTask
     //thirdTask
@@ -17,7 +17,7 @@ object TestScala {
 
 
 
-  def firstTaskDataFrame(scalaConfig:SparkConf, sparkContext: SparkContext): Unit ={
+  def firstTaskSeconcdTask(scalaConfig:SparkConf, sparkContext: SparkContext): Unit ={
     //    var scalaConfig = new SparkConf().setAppName("firstTask").setMaster("local[2]")
     //    val sparkContext = new SparkContext(scalaConfig)
     val sqlContext = SparkSession.builder().appName("firstTask").config("spark.master","local").getOrCreate()
