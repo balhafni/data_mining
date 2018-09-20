@@ -10,7 +10,7 @@ object TestScala {
     val sparkContext = new SparkContext(scalaConfig)
 
     firstTaskSeconcdTask(scalaConfig, sparkContext)
-    thirdTask(scalaConfig, sparkContext)
+    //thirdTask(scalaConfig, sparkContext)
     //firstTask
     //thirdTask
   }
@@ -18,19 +18,20 @@ object TestScala {
 
 
   def firstTaskSeconcdTask(scalaConfig:SparkConf, sparkContext: SparkContext): Unit ={
-    //    var scalaConfig = new SparkConf().setAppName("firstTask").setMaster("local[2]")
-    //    val sparkContext = new SparkContext(scalaConfig)
+
     val sqlContext = SparkSession.builder().appName("firstTask").config("spark.master","local").getOrCreate()
-    val df = sqlContext.read.format("csv").option("header","true").load("C:\\Users\\Bashar Alhafni\\IdeaProjects\\DataMiningHw1\\stack-overflow-2018-developer-survey\\survey_results_public.csv")
+    val df = sqlContext.read.format("csv").option("header","true").load("/Users/alhafni/Desktop/stack-overflow-2018-developer-survey/survey_results_public.csv")
+    //third task
+    val oldPartition = df.repartition(2)
+
     val start1 = System.currentTimeMillis()
 
-    val countryCount = df.filter((regexp_replace(df("Salary"),",","")*1=!="0") and (df("Salary") =!= "NA")).groupBy("Country").count().sort("Country")
+    val countryCount = df.filter((regexp_replace(df("Salary"),",","") =!="0") and (df("Salary") =!= "NA")).groupBy("Country").count().sort("Country")
 
     //countryCount.show()
     val totalCount = countryCount.agg(sum("count"))
 
-    //third task
-    val oldPartition = countryCount.repartition(2)
+
 
     println("The old number of partitions: "+oldPartition.rdd.getNumPartitions)
     //    val itemsPerPartition = countryCount.rdd.mapPartitions(i => Array(i.size).iterator, true)
@@ -38,7 +39,7 @@ object TestScala {
     println("Old took---->"+(System.currentTimeMillis() - start1))
 
     val start2 = System.currentTimeMillis()
-    val newPartition = countryCount.repartition(2,countryCount("Country"))
+    val newPartition = df.repartition(2,df("Country"))
     println("The new number of partitions: "+newPartition.rdd.getNumPartitions)
     //    val itemsPerPartition = countryCount.rdd.mapPartitions(i => Array(i.size).iterator, true)
     println("The number of items per partition in new parition "+newPartition.rdd.mapPartitions(i => Array(i.size).iterator, true).collect().mkString(","))
@@ -68,7 +69,7 @@ object TestScala {
 //    var scalaConfig = new SparkConf().setAppName("firsAssignmnet").setMaster("local[2]")
 //    val sparkContext = new SparkContext(scalaConfig)
     val sqlContext = SparkSession.builder().appName("thirdTask").config("spark.master","local").getOrCreate()
-    val df = sqlContext.read.format("csv").option("header","true").load("C:\\Users\\Bashar Alhafni\\IdeaProjects\\DataMiningHw1\\stack-overflow-2018-developer-survey\\survey_results_public.csv")
+    val df = sqlContext.read.format("csv").option("header","true").load("/Users/alhafni/Desktop/stack-overflow-2018-developer-survey/survey_results_public.csv")
 
 
     //salary count for each country
@@ -127,7 +128,7 @@ object TestScala {
     var scalaContext = new SparkContext(scalaConfig)
 
     val t0 = System.currentTimeMillis()
-    val input_text = scalaContext.textFile("C:\\Users\\Bashar Alhafni\\IdeaProjects\\DataMiningHw1\\stack-overflow-2018-developer-survey\\survey_results_public.csv")
+    val input_text = scalaContext.textFile("/Users/alhafni/Desktop/stack-overflow-2018-developer-survey/survey_results_public.csv")
 
     //getting the header of the file
     val header = input_text.first()
