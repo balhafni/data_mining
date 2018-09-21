@@ -8,16 +8,23 @@ object Task3 {
   def main(args: Array[String]): Unit = {
     var scalaConfig = new SparkConf().setAppName("firsAssignmnet").setMaster("local[2]")
     val sparkContext = new SparkContext(scalaConfig)
-    thirdTask(scalaConfig, sparkContext)
+    if(args.length > 1){
+      val input_file = args(0)
+      val output_file = args(1)
+      thirdTask(input_file,output_file,scalaConfig, sparkContext)
+    }else{
+      println("the input and/or output argument(s) are missing ... aborting")
+    }
+
 
   }
 
-  def thirdTask(scalaConfig:SparkConf, sparkContext: SparkContext): Unit ={
+  def thirdTask(input:String,output:String,scalaConfig:SparkConf, sparkContext: SparkContext): Unit ={
 
     val sqlContext = SparkSession.builder().appName("thirdTask").config("spark.master","local").getOrCreate()
 
     //reading the data into a dataframe
-    val df = sqlContext.read.format("csv").option("header","true").load("/Users/alhafni/Desktop/stack-overflow-2018-developer-survey/survey_results_public.csv")
+    val df = sqlContext.read.format("csv").option("header","true").load(input)
 
 
     //salary count for each country
@@ -52,7 +59,7 @@ object Task3 {
 
 
     //writing to a file
-    var out = new PrintWriter(new FileWriter("thirdTask.csv"))
+    var out = new PrintWriter(new FileWriter(output))
 
     finalRes.collect().foreach(element => out.println(element(0).toString().replaceAll(",","") +","+element(1).toString().toDouble.toInt+","+element(2).toString().toDouble.toInt+","+element(3).toString().toDouble.toInt+
       ","+BigDecimal(element(4).toString().toDouble).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble))
@@ -60,6 +67,5 @@ object Task3 {
 
     out.close()
 
-    finalRes.show()
   }
 }
