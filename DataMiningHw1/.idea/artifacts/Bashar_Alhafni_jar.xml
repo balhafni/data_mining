@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="Bashar_Alhafni:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/Bashar_Alhafni_jar</output-path>
-    <root id="archive" name="Bashar_Alhafni.jar">
-      <element id="module-output" name="datamininghw1-build" />
-      <element id="module-output" name="DataMiningHw1" />
-    </root>
-  </artifact>
-</component>
