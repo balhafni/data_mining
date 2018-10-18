@@ -1,3 +1,3 @@
 # inf553_data_mining
 
-1.1) [IsUnique.java](https://github.com/balhafni/CTCI/blob/master/Solutions/Chapter1/IsUnique.java)
+#### hw1: Analyzing the [Stackoverflow 2018 Developer Survey ](https://github.com/balhafni/CTCI/blob/master/Solutions/Chapter1/IsUnique.java) data
