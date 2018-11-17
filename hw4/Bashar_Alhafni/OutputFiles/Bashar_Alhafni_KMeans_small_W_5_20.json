@@ -1,0 +1,30 @@
+{
+  "algorithm":"K-means",
+  "WSEEE":154437.68270246053,
+  "Clusters":[{
+    "id":0,
+    "size":890,
+    "error":105409.61797753954,
+    "terms":["good","place","like","food","great","get","one","time","service","go"]
+  },{
+    "id":1,
+    "size":103,
+    "error":47549.39805825432,
+    "terms":["like","food","would","one","time","place","good","back","us","get"]
+  },{
+    "id":2,
+    "size":3,
+    "error":348.6666666666679,
+    "terms":["swim","pool","kids","year","old","great","lessons","enough","area","like"]
+  },{
+    "id":3,
+    "size":1,
+    "error":0.0,
+    "terms":["old","served","hugos","vegas","complementary","great","hotel","experience","try","prepared"]
+  },{
+    "id":4,
+    "size":3,
+    "error":1129.9999999999995,
+    "terms":["cheese","sandwich","burger","bettys","bamburger","grilled","uncle","one","toppings","great"]
+  }]
+}
