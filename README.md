@@ -8,3 +8,7 @@
 
 
 #### hw3: Frequent Itemsets
+
+#### hw4: Clustering
+
+#### hw5: Streaming
