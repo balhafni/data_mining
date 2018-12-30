@@ -10,7 +10,7 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
   spark-submit --class <className> <JarFileName.jar> <input_file> <output_file>
   ```
   Where:<br/>
-  \<className> should be subtituted by Task1, Task2, or Task3 to execute the above tasks described above. <br />
+  \<className> should be subtituted by Task1, Task2, or Task3 to execute the tasks described above. <br />
   <JarFileName.jar> is should be subtituted by hw1/Bashar_Alhafni/Solution/Bashar_Alhafni.jar <br />
   <input_file> is the absolute path for the big Stackoverflow csv [data](https://www.kaggle.com/stackoverflow/stack-overflow-2018-developer-survey)<br />
   <output_file> is the absolute path for the output. <br />
