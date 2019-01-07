@@ -20,10 +20,27 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
   ```
    
   
+* #### hw2: Recommendation Systems as part of the [Yelp Challenge](https://www.yelp.com/dataset/challenge) ####
+  
+  * 1) Model-based Collaborative Filtering:
+    This implementation of this part of the assignment was done by using Spark MLlib. I was able to accomplish a Root Mean Square Error (RMSE) of 1.076.
 
-#### hw2: Recommendation Systems as part of the [Yelp Challenge](https://www.yelp.com/dataset/challenge)
-1) Model Based Collaborative Filtering 
-2) Item Based Collaborative Filtering
+  * 2) Item-based Collaborative Filtering: After inspecting the data thoroughly, I was able to get to build an Item Based CF system by marely using the averages instead of complex pearson correlations. This is mainly because of the existence of many users in the dataset who rated one and only one business. 
+ Using this simple method, I was able to obtain a RMSE of 1.08.
+
+  ##### Executing the code:
+
+   To run the Model-based CF System, the following command must be executed:
+
+   ```
+   spark-submit --class Bashar_Alhafni_ModelBasedCF Bashar_Alhafni_hw2.jar train_review.csv test_review.csv
+   ```
+ 
+   To run the Item-based CF system, the following command must be executed:
+
+   ```
+   spark-submit --class Bashar_Alhafni_ItemBasedCF Bashar_Alhafni_hw2.jar train_review.csv test_review.csv
+   ```
 
 
 #### hw3: Frequent Itemsets
