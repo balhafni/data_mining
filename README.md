@@ -109,6 +109,6 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
    So to run the reservoir sampling algorithm, the following command must be executed:
    
    ```
-   spark-submit --class TwitterStreaming ~alhafni/Desktop/repos/inf553_data_mining/hw5/Bashar_Alhafni/Solution/ Bashar_Alhafni_hw5.jar
+   spark-submit --class TwitterStreaming Bashar_Alhafni_hw5.jar
    ```
   
