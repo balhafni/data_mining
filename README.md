@@ -80,8 +80,8 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
     
     Where:<br/>
     \<className> should be subtituted by Task 1 or Task 2. Task 1 for word counts as features and Task 2 for tf-idf as features<br />
-    <JarFileName.jar> should be subtituted by hw4/Bashar_Alhafni/Solution/Bashar_Alhafni_SON.jar <br />
-    <yelp_reviews_data> is the absolute path of the yelp reviews data. The small dataset could be found in hw4/Data.zip<br/>
+    <JarFileName.jar> should be subtituted by Solution/Bashar_Alhafni_SON.jar <br />
+    <yelp_reviews_data> is the absolute path of the yelp reviews data. The small dataset could be found in Data.zip<br/>
     <feature_type> is W for word counts or T for tf-idf <br />
     <num_of_clusters> is the number of clusters we would like to create<br />
     <max_iterations> max iteration until the termination of the algorithm <br />
@@ -104,7 +104,7 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
    
    Where:<br/>
     \<className> should be subtituted by TwitterStreaming. <br />
-    <JarFileName.jar> should be subtituted by hw5/Bashar_Alhafni/Solution/Bashar_Alhafni_hw5.jar <br />
+    <JarFileName.jar> should be subtituted by Solution/Bashar_Alhafni_hw5.jar <br />
    
    So to run the reservoir sampling algorithm, the following command must be executed:
    
