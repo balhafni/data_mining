@@ -1,6 +1,6 @@
 # data_mining
 Note: This work was done using Spark 2.3.1 and Scala 2.11.0
-* #### hw1: Analyzing the [Stackoverflow 2018 Developer Survey ](https://www.kaggle.com/stackoverflow/stack-overflow-2018-developer-survey) data ####
+* #### Analyzing the [Stackoverflow 2018 Developer Survey ](https://www.kaggle.com/stackoverflow/stack-overflow-2018-developer-survey) data ####
   * 1) Task 1: Computing the total number of survey responses per country that have provided a salary value.
   * 2) Task 2: Showing the number of partitions for the RDD built in Task 1 and show the number of items per partition as well as improving the performance of map and reduce tasks.
   * 3) Task 3: Computing the annual salary averages per country and show min and max salaries.
@@ -11,7 +11,7 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
   ```
   Where:<br/>
   \<className> should be subtituted by Task1, Task2, or Task3 to execute the tasks described above. <br />
-  <JarFileName.jar> is should be subtituted by hw1/Bashar_Alhafni/Solution/Bashar_Alhafni.jar <br />
+  <JarFileName.jar> is should be subtituted by Solution/Bashar_Alhafni.jar <br />
   <input_file> is the absolute path for the big Stackoverflow csv [data](https://www.kaggle.com/stackoverflow/stack-overflow-2018-developer-survey)<br />
   <output_file> is the absolute path for the output. <br />
   So to run Task 1, the following command should be executed:
@@ -20,7 +20,7 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
   ```
    
   
-* #### hw2: Recommendation Systems as part of the [Yelp Challenge](https://www.yelp.com/dataset/challenge) ####
+* #### Recommendation Systems as part of the [Yelp Challenge](https://www.yelp.com/dataset/challenge) ####
   
   * 1) Model-based Collaborative Filtering:
     This implementation of this part of the assignment was done by using Spark MLlib. I was able to accomplish a Root Mean Square Error (RMSE) of 1.076.
@@ -35,9 +35,9 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
   ```
   Where:<br/>
   \<className> should be subtituted by Bashar_Alhafni_ItemBasedCF or Bashar_Alhafni_ModelBasedCF <br />
-  <JarFileName.jar> should be subtituted by hw2/Bashar_Alhafni/Solution/Bashar_Alhafni_hw2.jar <br />
-  <train_dataset> is the absolute path of the training dataset (train_review.csv). This could be found in hw2/Data.zip <br />
-  <test_dataset> is the absolute path of the testing dataset (test_review.csv). This could be found in hw2/Data.zip <br />
+  <JarFileName.jar> should be subtituted by Solution/Bashar_Alhafni_hw2.jar <br />
+  <train_dataset> is the absolute path of the training dataset (train_review.csv). This could be found in Data.zip <br />
+  <test_dataset> is the absolute path of the testing dataset (test_review.csv). This could be found in Data.zip <br />
   
   So to run Item-based CF system, the following command should be executed:
   
@@ -45,7 +45,7 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
    spark-submit --class Bashar_Alhafni_ItemBasedCF Bashar_Alhafni_hw2.jar train_review.csv test_review.csv
    ```
 
-* #### hw3: Frequent Itemsets ####
+* #### Frequent Itemsets ####
   
   * SON Algorithm: The goal of this project was to implement the SON algorithm to identify frequent words in Yelp reviews. This was implemented on the small and very large datasets as part of the [Yelp Challenge](https://www.yelp.com/dataset/challenge).
   
@@ -57,8 +57,8 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
     ```
      Where:<br/>
     \<className> should be subtituted by Bashar_Alhafni_SON  <br />
-    <JarFileName.jar> should be subtituted by hw3/Bashar_Alhafni/Solution/Bashar_Alhafni_SON.jar <br />
-    <yelp_reviews_data> is the absolute path of the yelp reviews data. The small dataset could be found in hw3/Data.zip and large dataset can be found [here](https://drive.google.com/file/d/1Yi2iy5jV96Q8q6FAitw8WWeeZe8hT1Nj/view). <br/>
+    <JarFileName.jar> should be subtituted by Solution/Bashar_Alhafni_SON.jar <br />
+    <yelp_reviews_data> is the absolute path of the yelp reviews data. The small dataset could be found in Data.zip and large dataset can be found [here](https://drive.google.com/file/d/1Yi2iy5jV96Q8q6FAitw8WWeeZe8hT1Nj/view). <br/>
     <support_threshhold> is the support threshhold that the SON algorithm takes as an input<br />
      <output_file> is the absolute path for the output. <br />
 
