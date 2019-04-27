@@ -1,4 +1,4 @@
-# inf553_data_mining
+# data_mining
 Note: This work was done using Spark 2.3.1 and Scala 2.11.0
 * #### hw1: Analyzing the [Stackoverflow 2018 Developer Survey ](https://www.kaggle.com/stackoverflow/stack-overflow-2018-developer-survey) data ####
   * 1) Task 1: Computing the total number of survey responses per country that have provided a salary value.
