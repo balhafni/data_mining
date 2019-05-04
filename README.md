@@ -69,7 +69,7 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
 
     NOTE: Since the dataset is huge, we might need to use the ```--driver-memory``` option to increase the memory that spark uses.
 
-* #### hw4: Clustering ####
+* #### Clustering ####
   * K-means: The goal of this project was to implement the mentioned algorithms on the yelp reviews dataset. The algorithm was implemented using word counts or tf-idf as features to compute the Euclidean Distances. 
    
    ##### Executing the code:
@@ -93,7 +93,7 @@ Note: This work was done using Spark 2.3.1 and Scala 2.11.0
     ```
 
    
-* #### hw5: Streaming ####
+* #### Streaming ####
   * Reservoir Sampling Algorithm: The goal of this project is to use the Twitter API of streaming to implement the fixed size sampling method (Reservoir Sampling Algorithm) and use the sampling to track the popular tags on tweets and calculate the average length of tweets.
   
    ##### Executing the code:
