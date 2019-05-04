@@ -21,10 +21,10 @@ object TwitterStreaming {
     val sc = new SparkContext(sparkConf)
 //    sc.setLogLevel(logLevel = "OFF")
 
-    val consumerKey = "UdRfUeSWSLWqcD0FxZXDhgHHT"
-    val consumerSecret ="fa2gZFA9CA1F422o3BX5ClPhPfPaN0QNJ04C1hd8ZQSGmVYrkK"
-    val accessToken ="1063986211881009153-VA6jBLQDdBV0BnMykWRy1gElXn2FG9"
-    val accessTokenSecret="mDjA9HRt3eKmAlRTQdv6kd8XRgudbG6hnx6X0APNwJMqh"
+    val consumerKey = "<TwitterAccountConsumerKey>"
+    val consumerSecret ="<TwitterAccountConsumerSecret>"
+    val accessToken ="<TwitterAccountAccessToken>"
+    val accessTokenSecret="<TwitterAccountAccessTokenSecret>"
 
     // Set the system properties so that Twitter4j library used by twitter stream
     // can use them to generate OAuth credentials
